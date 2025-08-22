@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>红旗渠精神与当代践行</title>
+    <!-- 引入Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- 配置Tailwind自定义颜色和字体 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#C41E3A', // 红旗渠红色
+                        secondary: '#1E3A8A', // 深蓝色
+                        accent: '#FBBF24', // 金色点缀
+                        neutral: '#F3F4F6', // 浅灰色背景
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .text-shadow-lg {
+                text-shadow: 0 4px 8px rgba(0,0,0,0.25);
+            }
+            .transition-transform {
+                transition-property: transform;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                transition-duration: 300ms;
+            }
+            .scroll-smooth {
+                scroll-behavior: smooth;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 scroll-smooth">
+    <!-- 导航栏 -->
+    <header id="navbar" class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <i class="fa fa-flag text-primary text-2xl"></i>
+                <span class="text-xl font-bold text-primary">红旗渠精神</span>
+                <img src="img/SpLwl62f98.jpg" />
+            </a>
+            
+            <!-- 桌面导航 -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="font-medium hover:text-primary transition-colors">首页</a>
+                <a href="#spirit" class="font-medium hover:text-primary transition-colors">精神内涵</a>
+                <a href="#cases" class="font-medium hover:text-primary transition-colors">当代践行</a>
+                <a href="#gallery" class="font-medium hover:text-primary transition-colors">影像资料</a>
+                <a href="#about" class="font-medium hover:text-primary transition-colors">关于我们</a>
+            </nav>
+            
+            <!-- 移动端菜单按钮 -->
+            <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
+                <i class="fa fa-bars text-xl"></i>
+            </button>
+        </div>
+        
+        <!-- 移动端导航菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+                <a href="#home" class="py-2 hover:text-primary transition-colors">首页</a>
+                <a href="#spirit" class="py-2 hover:text-primary transition-colors">精神内涵</a>
+                <a href="#cases" class="py-2 hover:text-primary transition-colors">当代践行</a>
+                <a href="#gallery" class="py-2 hover:text-primary transition-colors">影像资料</a>
+                <a href="#about" class="py-2 hover:text-primary transition-colors">关于我们</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 英雄区域 -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- 背景图片 -->
+        <div class="absolute inset-0 z-0">
+            <img src="img/微信图片_20250626172759_29_125.jpg" alt="红旗渠风景" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/50"></div>
+        </div>
+        
+        <!-- 内容 -->
+        <div class="container mx-auto px-4 z-10 text-center">
+            <h1 class="text-[clamp(2.5rem,6vw,4.5rem)] font-bold text-white mb-6 leading-tight text-shadow-lg animate-fade-in">
+                红旗渠精神<br>代代相传
+            </h1>
+            <p class="text-[clamp(1rem,2vw,1.25rem)] text-white/90 max-w-2xl mx-auto mb-10 text-shadow">
+                自力更生、艰苦创业、团结协作、无私奉献的红旗渠精神，在新时代依然闪耀着不朽的光芒
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#spirit" class="bg-primary hover:bg-primary/90 text-white font-medium py-3 px-8 rounded-lg transition-all transform hover:scale-105 shadow-lg">
+                    探索精神内涵
+                </a>
+                <a href="#cases" class="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border border-white/30 font-medium py-3 px-8 rounded-lg transition-all transform hover:scale-105">
+                    查看当代案例
+                </a>
+            </div>
+        </div>
+        
+        <!-- 向下滚动指示 -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+            <a href="#spirit" class="flex flex-col items-center">
+                <span class="mb-2 text-sm">向下滚动</span>
+                <i class="fa fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- 红旗渠精神内涵部分 -->
+    <section id="spirit" class="py-20 bg-neutral">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-gray-800 mb-4">红旗渠精神内涵</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    红旗渠精神是林县人民在修建红旗渠的伟大实践中形成的，是中国共产党人精神谱系的重要组成部分。
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- 精神内涵卡片1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl transform hover:-translate-y-2">
+                    <div class="h-48 overflow-hidden">
+                        <img src="img/00bf6fa16ebf6604989fdc109714f4aa.jpg" alt="自力更生" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa fa-hands text-primary text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">自力更生</h3>
+                        <p class="text-gray-600">
+                            面对恶劣的自然条件和匮乏的物资，林县人民不等不靠，依靠自己的力量，克服重重困难，创造了人间奇迹。
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- 精神内涵卡片2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl transform hover:-translate-y-2">
+                    <div class="h-48 overflow-hidden">
+                        <img src="img/745621517c1fd324b6c8094cdb1ae113.jpg" alt="艰苦创业" class="w-full h-80 object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa fa-hammer text-primary text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">艰苦创业</h3>
+                        <p class="text-gray-600">
+                            在修建红旗渠的过程中，广大建设者不畏艰险，不怕牺牲，以顽强的意志和毅力，战天斗地，谱写了一曲曲感天动地的创业壮歌。
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- 精神内涵卡片3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl transform hover:-translate-y-2">
+                    <div class="h-48 overflow-hidden">
+                        <img src="img/b31e43903d8c66ed6c9020ab1b1e2514.jpg" alt="团结协作" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa fa-users text-primary text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">团结协作</h3>
+                        <p class="text-gray-600">
+                            红旗渠的修建是全县人民团结一心、众志成城的结果。上至县委书记，下至普通百姓，心往一处想，劲往一处使，形成了强大的合力。
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- 精神内涵卡片4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl transform hover:-translate-y-2">
+                    <div class="h-48 overflow-hidden">
+                        <img src="img/F4AC9A74509EB0E3F9196AFB599C5C82CA50E813_size104_w1080_h570.jpg" alt="无私奉献" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa fa-heart text-primary text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">无私奉献</h3>
+                        <p class="text-gray-600">
+                            在红旗渠修建过程中，无数建设者舍小家为大家，不计个人得失，甚至献出了宝贵的生命，用实际行动诠释了无私奉献的精神。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 精神详细介绍 -->
+            <div class="mt-16 bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2">
+                        <img src="img/1fa5834888dccf58dbb96589ca47e886.jpg" alt="红旗渠精神详解" class="w-full h-full object-cover">
+                    </div>
+                    <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold mb-6 text-primary">红旗渠精神的时代价值</h3>
+                        <p class="text-gray-700 mb-4 leading-relaxed">
+                            红旗渠精神不仅是林县人民的宝贵财富，也是中国人民的宝贵财富。在新时代，红旗渠精神依然具有重要的现实意义和时代价值。
+                        </p>
+                        <p class="text-gray-700 mb-4 leading-relaxed">
+                            自力更生、艰苦创业的精神，激励我们在面对困难和挑战时，不等不靠，依靠自己的力量解决问题；团结协作、无私奉献的精神，提醒我们在实现中华民族伟大复兴的征程中，要心往一处想、劲往一处使，凝聚起强大的奋进力量。
+                        </p>
+                        <p class="text-gray-700 leading-relaxed">
+                            红旗渠精神是激励我们不断前进的强大精神动力，我们要传承和弘扬红旗渠精神，使之在新时代焕发出新的生机和活力。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 当代践行案例部分 -->
+    <section id="cases" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-gray-800 mb-4">当代践行案例</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    红旗渠精神在当代依然焕发着强大的生命力，激励着人们在各个领域创造新的业绩。
+                </p>
+            </div>
+            
+            <!-- 案例1：茶店镇菊花产业 -->
+            <div class="mb-20 bg-neutral rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
+                <div class="md:flex flex-row-reverse">
+                    <div class="md:w-1/2">
+                        <img src="img/d8ad26b835381411ab421b63b25263c4.jpg" alt="茶店镇菊花产业" class="w-full h-full object-cover">
+                    </div>
+                    <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                        <span class="text-sm font-semibold text-primary uppercase tracking-wider mb-2">乡村振兴案例</span>
+                        <h3 class="text-2xl font-bold mb-6">茶店镇菊花产业</h3>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            林州市茶店镇依托当地自然资源优势，大力发展菊花产业，走出了一条特色农业发展之路。当地农民传承红旗渠精神，不等不靠，通过自己的双手创造美好生活。
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <div class="text-3xl font-bold text-primary mb-1">5000+</div>
+                                <div class="text-gray-600">种植农户</div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <div class="text-3xl font-bold text-primary mb-1">2000+</div>
+                                <div class="text-gray-600">种植亩数</div>
+                            </div>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+                            了解更多 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 影像资料部分 -->
+    <section id="gallery" class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-4">影像资料</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-gray-300 max-w-3xl mx-auto">
+                    通过镜头记录红旗渠的历史与现状，感受红旗渠精神的传承与发展。
+                </p>
+            </div>
+            
+            <!-- 图片画廊 -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-12">
+                <!-- 图片1 -->
+                <div class="gallery-item overflow-hidden rounded-lg cursor-pointer group">
+                    <img src="img/0c432ea0afa559f52c4ec62d7e860516.jpg" alt="寄语" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <!-- 图片2 -->
+                <div class="gallery-item overflow-hidden rounded-lg cursor-pointer group">
+                    <img src="img/3c7116982dfb40fb389bd1759c52a9ca.jpg" alt="精神引领" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <!-- 图片3 -->
+                <div class="gallery-item overflow-hidden rounded-lg cursor-pointer group">
+                    <img src="img/5291ff75ec1b90de2f5a4d5a004f416b.jpg" alt="信息" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <!-- 图片4 -->
+                <div class="gallery-item overflow-hidden rounded-lg cursor-pointer group">
+                    <img src="img/87fa036b6fb765274a6e8fc3c0928644.jpg" alt="背景" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <!-- 图片5 -->
+                <div class="gallery-item overflow-hidden rounded-lg cursor-pointer group">
+                    <img src="img/bd592485bc52b8f5da5ab8d5c34242bd.jpg" alt="评价" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <!-- 图片6 -->
+                <div class="gallery-item overflow-hidden rounded-lg cursor-pointer group">
+                    <img src="img/微信图片_20250820190640_1_9.jpg" alt="三下乡" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <!-- 图片7 -->
+                <div class="gallery-item overflow-hidden rounded-lg cursor-pointer group">
+                    <img src="img/微信图片_20250820190702_5_9.jpg" alt="菊花" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <!-- 图片8 -->
+                <div class="gallery-item overflow-hidden rounded-lg cursor-pointer group">
+                    <img src="img/微信图片_20250821154505_4_32.jpg" alt="红旗渠精神宣讲" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们部分 -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-neutral rounded-xl shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/3">
+                        <img src="img/微信图片_20250821154452_3_32.jpg" alt="河南大学三下乡活动" class="w-full h-full object-cover">
+                    </div>
+                    <div class="md:w-2/3 p-8 md:p-10">
+                        <h2 class="text-2xl font-bold mb-6">关于我们</h2>
+                        <p class="text-gray-700 mb-4 leading-relaxed">
+                            我们是河南大学的学生团队，在2025年暑假期间参加了"三下乡"社会实践活动，前往林州市参观了红旗渠，并考察了茶店镇菊花产业。
+                        </p>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            通过这次实践活动，我们深刻感受到了红旗渠精神的伟大内涵，也看到了这种精神在当代的生动实践。本网站旨在记录我们的所见所闻所感，传播红旗渠精神，让更多人了解红旗渠的历史和现状。
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <div class="flex items-center">
+                                <i class="fa fa-users text-primary mr-2"></i>
+                                <span class="text-gray-600">实践团队：8人</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fa fa-calendar text-primary mr-2"></i>
+                                <span class="text-gray-600">实践时间：2025年8月</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fa fa-map-marker text-primary mr-2"></i>
+                                <span class="text-gray-600">实践地点：河南林州</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4 flex items-center">
+                        <i class="fa fa-flag text-primary mr-2"></i> 红旗渠精神
+                    </h3>
+                    <p class="text-gray-400 text-sm">
+                        传承红旗渠精神，弘扬时代新风，为实现中华民族伟大复兴的中国梦贡献力量。
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">快速链接</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#home" class="hover:text-primary transition-colors">首页</a></li>
+                        <li><a href="#spirit" class="hover:text-primary transition-colors">精神内涵</a></li>
+                        <li><a href="#cases" class="hover:text-primary transition-colors">当代践行</a></li>
+                        <li><a href="#gallery" class="hover:text-primary transition-colors">影像资料</a></li>
+                        <li><a href="#about" class="hover:text-primary transition-colors">关于我们</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">联系我们</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fa fa-phone text-primary mr-2"></i>
+                            <span>123-4567-8910</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">关注我们</h3>
+                    <div class="flex space-x-4">
+                        <a href="img/05506c0bb20fd09265d97a22d4715921.jpg" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fa fa-weixin"></i>
+                        </a>
+                        <a href="http://www.cnhqq.com/index.php" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fa fa-weibo"></i>
+                        </a>
+                    </div>
+                    <p class="mt-4 text-gray-400 text-sm">
+                        扫描二维码关注我们的公众号，获取更多红旗渠相关资讯。
+                    </p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                <p>© 2025 河南大学三下乡实践团队 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 图片查看器模态框 -->
+    <div id="image-modal" class="fixed inset-0 bg-black/90 z-50 hidden flex items-center justify-center p-4">
+        <button id="close-modal" class="absolute top-6 right-6 text-white text-3xl hover:text-primary transition-colors">
+            <i class="fa fa-times"></i>
+        </button>
+        <img id="modal-image" src="" alt="大图预览" class="max-w-full max-h-screen">
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('py-2', 'shadow');
+                navbar.classList.remove('py-3');
+            } else {
+                navbar.classList.add('py-3');
+                navbar.classList.remove('py-2', 'shadow');
+            }
+        });
+        
+        // 移动端菜单切换
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // 图片查看器
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const imageModal = document.getElementById('image-modal');
+        const modalImage = document.getElementById('modal-image');
+        const closeModal = document.getElementById('close-modal');
+        
+        galleryItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const imgSrc = this.querySelector('img').src;
+                modalImage.src = imgSrc;
+                imageModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // 防止背景滚动
+            });
+        });
+        
+        closeModal.addEventListener('click', function() {
+            imageModal.classList.add('hidden');
+            document.body.style.overflow = ''; // 恢复背景滚动
+        });
+        
+        // 点击模态框外部关闭
+        imageModal.addEventListener('click', function(e) {
+            if (e.target === imageModal) {
+                imageModal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                // 关闭移动端菜单（如果打开）
+                document.getElementById('mobile-menu').classList.add('hidden');
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80, // 考虑导航栏高度
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+    </script>
+</body>
+</html>
